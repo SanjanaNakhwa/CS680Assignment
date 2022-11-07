@@ -1,0 +1,23 @@
+<ivy-module version="2.0">
+	<info organisation="cs680" module="junit5"/>
+	<dependencies>
+		<!-- Visit https://mvnrepository.com/ to search a JAR library file that you
+		     want to use. Look into its pom.xml.  
+		     org: "groupId" in pom.xml
+		     name: "artifactId" in pom.xml
+		     rev: "version" in pom.xml
+		-->
+        <dependency org="org.junit.jupiter" name="junit-jupiter-api" rev="5.9.1"/>
+        <dependency org="org.junit.jupiter" name="junit-jupiter-engine" rev="5.9.1"/>
+		<dependency org="org.junit.jupiter" name="junit-jupiter-params" rev="5.9.1"/>
+
+		<dependency org="org.junit.platform" name="junit-platform-commons" rev="1.9.1"/>
+		<dependency org="org.junit.platform" name="junit-platform-engine" rev="1.9.1"/>
+		<dependency org="org.junit.platform" name="junit-platform-launcher" rev="1.9.1"/>
+		<dependency org="org.junit.platform" name="junit-platform-runner" rev="1.9.1"/>
+		<dependency org="org.junit.platform" name="junit-platform-suite-api" rev="1.9.1"/>
+
+		<dependency org="org.apiguardian" name="apiguardian-api" rev="1.1.2"/>
+		<dependency org="org.opentest4j" name="opentest4j" rev="1.2.0"/>
+    </dependencies>
+</ivy-module>	
