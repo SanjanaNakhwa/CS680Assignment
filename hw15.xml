@@ -33,22 +33,22 @@
 	<target name="compile" depends="resolve">
 		<javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
 			<classpath refid="classpath"/>
-			<include name="edu/umb/cs680/hw08/fs/*.java"/>
-            <include name="edu/umb/cs680/hw08/util/*.java"/>
+			<include name="edu/umb/cs680/hw15/fs/*.java"/>
+            <include name="edu/umb/cs680/hw15/util/*.java"/>
 
-			<!-- include name="edu/umb/cs680/hw08/FileSystem.java"/-->
+			<!-- include name="edu/umb/cs680/hw15/FileSystem.java"/-->
 		</javac>
 		<javac srcdir="${test.src}" destdir="${test.bin}" includeAntRuntime="no"> 
 			<classpath refid="classpath"/>
-			<include name="edu/umb/cs680/hw08/*.java"/>
-			<!-- include name="edu/umb/cs680/hw08/SingletonTest.java"/-->
+			<include name="edu/umb/cs680/hw15/*.java"/>
+			<!-- include name="edu/umb/cs680/hw15/SingletonTest.java"/-->
 		</javac>
 	</target>
 
 	<target name="test" depends="compile">
 		<!--junitlauncher printSummary="yes">
 			<classpath refid="classpath" />
-			<test outputdir="test" name="edu.umb.cs680.hw08.FileSystem"/>
+			<test outputdir="test" name="edu.umb.cs680.hw15.SingletonTest"/>
 			<listener type="legacy-plain" sendSysOut="true"/>
 		</junitlauncher-->
 	
@@ -56,7 +56,7 @@
 			<classpath refid="classpath" />
 			<testclasses outputdir="test">
 				<fileset dir="${test.bin}">
-					<include name="edu/umb/cs680/hw08/*Test.class"/>
+					<include name="edu/umb/cs680/hw15/*Test.class"/>
 				</fileset>
 				<!--listener type="legacy-plain" sendSysOut="true"/-->
 				<listener type="legacy-brief" sendSysOut="true"/>
@@ -68,8 +68,8 @@
 	
 	<target name="clean" depends="test">
 		<delete includeemptydirs="true">
-			<fileset dir="${bin}/edu/umb/cs680/hw08" includes="**/*"/>
-			<fileset dir="${test.bin}/edu/umb/cs680/hw08" includes="**/*"/>
+			<fileset dir="${bin}/edu/umb/cs680/hw15" includes="**/*"/>
+			<fileset dir="${test.bin}/edu/umb/cs680/hw15" includes="**/*"/>
 		</delete>
 	</target>
 	
@@ -78,4 +78,3 @@
         <ivy:cleancache/>
     </target>
 </project>
-
