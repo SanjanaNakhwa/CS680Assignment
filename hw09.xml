@@ -4,7 +4,7 @@
 
       on a shell. 
 -->
-<project name="Statedesign-junit5-ivy" basedir="."  default="clean" xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="FileSystem-junit5-ivy" basedir="."  default="clean" xmlns:ivy="antlib:org.apache.ivy.ant">
 	<property name="src" location="src" />
 	<property name="bin" location="bin" />
 	<property name="test.src" location="test/src" />
@@ -33,20 +33,21 @@
 	<target name="compile" depends="resolve">
 		<javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
 			<classpath refid="classpath"/>
-			<include name="edu/umb/cs680/hw05/*.java"/>
-			<!-- include name="edu/umb/cs680/hw05/Statedesign.java"/-->
+			<include name="edu/umb/cs680/hw09/fs/*.java"/>
+            <include name="edu/umb/cs680/hw09/util/*.java"/>
+			<!-- include name="edu/umb/cs680/hw09/FileSystem.java"/-->
 		</javac>
 		<javac srcdir="${test.src}" destdir="${test.bin}" includeAntRuntime="no"> 
 			<classpath refid="classpath"/>
-			<include name="edu/umb/cs680/hw05/*.java"/>
-			<!-- include name="edu/umb/cs680/hw05/StateDesignTest.java"/-->
+			<include name="edu/umb/cs680/hw09/*.java"/>
+			<!-- include name="edu/umb/cs680/hw09/SingletonTest.java"/-->
 		</javac>
 	</target>
 
 	<target name="test" depends="compile">
 		<!--junitlauncher printSummary="yes">
 			<classpath refid="classpath" />
-			<test outputdir="test" name="edu.umb.cs680.hw03.StateDesignTest"/>
+			<test outputdir="test" name="edu.umb.cs680.hw09.SingletonTest"/>
 			<listener type="legacy-plain" sendSysOut="true"/>
 		</junitlauncher-->
 	
@@ -54,19 +55,20 @@
 			<classpath refid="classpath" />
 			<testclasses outputdir="test">
 				<fileset dir="${test.bin}">
-					<include name="edu/umb/cs680/hw05/*Test.class"/>
+					<include name="edu/umb/cs680/hw09/*Test.class"/>
 				</fileset>
-				<listener type="legacy-plain" sendSysOut="true"/>
-				<!--listener type="legacy-brief" sendSysOut="true"/-->
+				<!--listener type="legacy-plain" sendSysOut="true"/-->
+				<listener type="legacy-brief" sendSysOut="true"/>
 	        </testclasses>
 		</junitlauncher>
 	</target>
 	
-
+	
+	
 	<target name="clean" depends="test">
 		<delete includeemptydirs="true">
-			<fileset dir="${bin}/edu/umb/cs680/hw05" includes="**/*"/>
-			<fileset dir="${test.bin}/edu/umb/cs680/hw05" includes="**/*"/>
+			<fileset dir="${bin}/edu/umb/cs680/hw09" includes="**/*"/>
+			<fileset dir="${test.bin}/edu/umb/cs680/hw09" includes="**/*"/>
 		</delete>
 	</target>
 	
