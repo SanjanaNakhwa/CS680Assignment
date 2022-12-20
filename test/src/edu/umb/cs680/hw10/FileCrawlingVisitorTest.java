@@ -1,5 +1,4 @@
 package edu.umb.cs680.hw10;
-import edu.umb.cs680.hw10.*;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -10,8 +9,7 @@ import java.util.LinkedList;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import edu.umb.cs680.hw10.fs.util.FileCrawlingVisitor;
-import edu.umb.cs680.hw10.state.SecurityContext;
+
 
 public class FileCrawlingVisitorTest {
     private static FileSystem fs;

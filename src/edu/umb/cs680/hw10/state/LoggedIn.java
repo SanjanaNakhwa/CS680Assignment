@@ -1,4 +1,4 @@
-package edu.umb.cs680.hw10.state;
+package edu.umb.cs680.hw10;
 
 public class LoggedIn implements State {
 

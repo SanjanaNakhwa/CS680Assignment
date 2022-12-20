@@ -1,5 +1,4 @@
 package edu.umb.cs680.hw10;
-import edu.umb.cs680.hw10.*;
 
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,9 +8,6 @@ import java.time.LocalDateTime;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
-import edu.umb.cs680.hw10.fs.util.FileSearchVisitor;
-import edu.umb.cs680.hw10.state.SecurityContext;
 
 public class FileSearchVisitorTest {
     private static FileSystem fs;

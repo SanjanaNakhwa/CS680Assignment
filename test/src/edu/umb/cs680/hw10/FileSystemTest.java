@@ -1,5 +1,4 @@
 package edu.umb.cs680.hw10;
-import edu.umb.cs680.hw10.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

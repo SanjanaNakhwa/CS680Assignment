@@ -1,4 +1,4 @@
-package edu.umb.cs680.hw10.state;
+package edu.umb.cs680.hw10;
 import java.util.HashMap;
 
 public class Authenticator {

@@ -1,9 +1,6 @@
-package edu.umb.cs680.hw10.fs;
-import edu.umb.cs680.hw10.state;
-import edu.umb.cs680.hw10.util;
+package edu.umb.cs680.hw10;
 import java.time.LocalDateTime;
 
-import edu.umb.cs680.hw10.state.SecurityContext;
 
 public class Link extends FSElement {
     private FSElement target;
