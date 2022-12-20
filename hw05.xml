@@ -58,8 +58,8 @@
 				<fileset dir="${test.bin}">
 					<include name="edu/umb/cs680/hw05/*Test.class"/>
 				</fileset>
-				<!--listener type="legacy-plain" sendSysOut="true"/-->
-				<listener type="legacy-brief" sendSysOut="true"/>
+				<listener type="legacy-plain" sendSysOut="true"/>
+				<!--listener type="legacy-brief" sendSysOut="true"/-->
 	        </testclasses>
 		</junitlauncher>
 	</target>

@@ -7,9 +7,9 @@ public class StateDesignPatternTest {
 
     @Test
     public void testLoginFunctionality(){
-        SecurityContext ctx= new SecurityContext("XYZ");
+        SecurityContext ctx= new SecurityContext("ABC");
         assertTrue(ctx.getState() instanceof LoggedOut);
-        ctx.login("ABC");
+        ctx.login("123");
         assertTrue(ctx.getState() instanceof LoggedIn);
         ctx.logout();
         assertTrue(ctx.getState() instanceof LoggedOut);
