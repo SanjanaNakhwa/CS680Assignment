@@ -33,8 +33,7 @@
 	<target name="compile" depends="resolve">
 		<javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
 			<classpath refid="classpath"/>
-			<include name="edu/umb/cs680/hw16/fs/*.java"/>
-            <include name="edu/umb/cs680/hw16/util/*.java"/>
+			<include name="edu/umb/cs680/hw16/*.java"/>
 
 			<!-- include name="edu/umb/cs680/hw16/FileSystem.java"/-->
 		</javac>
