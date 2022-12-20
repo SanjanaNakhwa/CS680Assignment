@@ -40,13 +40,17 @@ public class FileSystemTest {
 
     @Test
     public void getRootDirsTest() {
-        assertEquals(root, FileSystem.getFileSystem().getRootDirs().get(0));
+        int size = fs.getRootDirs().size();
+        size = (size > 0) ? size - 1: 0;
+        assertEquals(root, fs.getRootDirs().get(size));
     }
 
     @Test
     public void appendRootDirectoryTest() {
         Directory root2 = new Directory(null, "root2", 0, LocalDateTime.now());
         fs.appendRootDirectory(root2);
-        assertEquals(2, fs.getRootDirs().size());
+        int size = fs.getRootDirs().size();
+        size = (size > 0) ? size - 1: 0;
+        assertEquals(root2, fs.getRootDirs().get(size));
     }
 }

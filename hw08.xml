@@ -4,7 +4,7 @@
 
       on a shell. 
 -->
-<project name="FileSystem-junit5-ivy" basedir="."  default="clean" xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="Singleton-junit5-ivy" basedir="."  default="clean" xmlns:ivy="antlib:org.apache.ivy.ant">
 	<property name="src" location="src" />
 	<property name="bin" location="bin" />
 	<property name="test.src" location="test/src" />
@@ -33,10 +33,8 @@
 	<target name="compile" depends="resolve">
 		<javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
 			<classpath refid="classpath"/>
-			<include name="edu/umb/cs680/hw08/fs/*.java"/>
-            <include name="edu/umb/cs680/hw08/util/*.java"/>
-
-			<!-- include name="edu/umb/cs680/hw08/FileSystem.java"/-->
+			<include name="edu/umb/cs680/hw08/*.java"/>
+			<!-- include name="edu/umb/cs680/hw08/Singleton.java"/-->
 		</javac>
 		<javac srcdir="${test.src}" destdir="${test.bin}" includeAntRuntime="no"> 
 			<classpath refid="classpath"/>
@@ -48,24 +46,21 @@
 	<target name="test" depends="compile">
 		<!--junitlauncher printSummary="yes">
 			<classpath refid="classpath" />
-			<test outputdir="test" name="edu.umb.cs680.hw08.FileSystem"/>
+			<test outputdir="test" name="edu.umb.cs680.hw08.SingletonTest"/>
 			<listener type="legacy-plain" sendSysOut="true"/>
 		</junitlauncher-->
 	
-
-		<junitlauncher haltOnFailure="true" printSummary="true"/>		
+		<junitlauncher haltOnFailure="true" printSummary="true">		
 			<classpath refid="classpath" />
 			<testclasses outputdir="test">
 				<fileset dir="${test.bin}">
 					<include name="edu/umb/cs680/hw08/*Test.class"/>
 				</fileset>
-				<!--listener type="legacy-plain" sendSysOut="true"/-->
-				<listener type="legacy-brief" sendSysOut="true"/>
+				<listener type="legacy-plain" sendSysOut="true"/>
+				<!--listener type="legacy-brief" sendSysOut="true"/-->
 	        </testclasses>
 		</junitlauncher>
 	</target>
-	
-	
 	
 	<target name="clean" depends="test">
 		<delete includeemptydirs="true">
@@ -79,4 +74,3 @@
         <ivy:cleancache/>
     </target>
 </project>
-
